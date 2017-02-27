@@ -28,6 +28,8 @@ SOFTWARE.
 
 
 (function () {
+
+    // Central Class for definiton of a Parameter
     var Value = function () {
         this._needed = true;
     };
@@ -77,9 +79,10 @@ SOFTWARE.
             return this;
         }
     };
-
     Value.prototype = ValueClass;
 
+
+    // Build a jScript code to check a parameter based on the definitions
     var build = function (def, name) {
         var back = ['true'];
         if (def._needed) {
@@ -105,7 +108,7 @@ SOFTWARE.
         return back;
     };
 
-
+    // Build a complete function (using eval) based on the Definitions provided
     var buildCheck = function (def) {
         var back = [];
         for (var i in def) {
@@ -123,7 +126,7 @@ SOFTWARE.
         return exec;
     };
 
-
+    // Central build function, extended with function to create parameter Definitions 
     var main = function (parameters) {
         var check = buildCheck(parameters);
         if (parameters._ === undefined) throw new Error('a Parameters definition need a function _');
