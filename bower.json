@@ -1,0 +1,21 @@
+{
+  "name": "pfunction",
+  "homepage": "https://github.com/keatec/pfunction",
+  "description": "Libary to manage parameters on functions (including options, typecheck, enumerations)",
+  "main": "js/pfunction.js",
+  "keywords": [
+    "parameters",
+    "check"
+  ],
+  "authors": [
+    "Keatec GmbH"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
