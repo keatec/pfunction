@@ -142,6 +142,9 @@ SOFTWARE.
         if (def === undefined) return main.p().isString();
         return main.p().isString().optional().defaults(def);
     };
+    main.Enum = function (def) {
+        return main.p().enumeration(def);
+    };
     main.Number = function (def) {
         if (def === undefined) return main.p().isNumber();
         return main.p().isNumber().optional().defaults(def);
