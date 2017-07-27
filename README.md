@@ -1,17 +1,17 @@
 # pfunction
-Libary to manage parameters on functions (including options, typecheck, enumerations)
+Library to manage parameters on functions (including options, typecheck, enumerations)
 
 # Motivation
 
-If you build a libary so other user can use the libary to access your data or to use your algorithms (remotly or local) you will need to provide access to this during function calls (and parameters)
+If you build a library so others can use it to access your data or use your algorithms (remotely or locally) you need to provide respective access during function calls (and parameters)
 
 Traditionally this will look like
 ```javascript
 doIt ("an url","a method", "an authentication")
 ```
-You will end up in problems, cause these names are not managed or typed. It's just the first, second .. parameter.
+Since names are not managed or typed, this will result in problems. It's just the first, second .. parameter.
 
-Most interfaces therefor will follow a pattern where all parameters are named elements of an object.
+Most interfaces therefore will follow a pattern where all parameters are named elements of an object.
 
 ```javascript
 doit({
@@ -20,12 +20,12 @@ doit({
     authentication: "..."
 })
 ```
-Mutch better, because now the parameters have names. But there are still a lot of problems
+Much better, because the parameters now have names. But there are still a lot of problems:
 * which options can be used
 * which values are allowed
 * is the value needed
 
-Some libarys use special functions like `assign` or `extend` to manage the parameter preparation. But if it comes to type or required parameters...
+Some libraries use special functions like `assign` or `extend` to manage the parameter preparation. But if it comes to type or required parameters...
 
 __pfunction is a more complete idea__
 
@@ -33,7 +33,7 @@ __Note:__ You will not use pfunction for all your functions, but if these functi
 
 # Usage
 
-you create a function by executing the main pFunction with a parameter describing the parameters for this function and the function itself `(named '_')`
+You create a function by executing the main pFunction with a parameter describing the parameters for this function and the function itself `(named '_')`
 
 ```javascript
 var pFunction = require('pfunction');
